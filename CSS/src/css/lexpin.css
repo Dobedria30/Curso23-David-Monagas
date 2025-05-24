@@ -8,34 +8,62 @@ nav {
   background-color: #0055ff;
   color: white;
   font-size: 25px;
+  /*al poner display flex, el elemento se convierte en una fila automaticamente*/
   display: flex;
   /*Eje principal, solo se puede usar si el elemento es flex*/
   justify-content: space-between;
   /*Eje secundario, solo se puede usar si el elemento es flex*/
   align-items: center;
   /*height: 300px;*/
-  /*Distancia entre el borde de la caja y su contenido*/
+  /*padding es la distancia entre el borde de la caja y su contenido*/
+  padding: 20px;
   /*
   padding: 20px; 20 px en todas las direcciones
   padding: 20px 0; 20 arriba y abajo, 0 derecha e izquierda
   padding: 20px 0 20px 0; 20 arriba, 0 derecha, 20 abajo, 0 izquierda
   */
-  padding: 20px;
+  border-radius: 0 0 15px 15px;
   /*Radio de los bordes, se lee arriba izquierda, arriba derecha
   abajo izquierda, abajo derecha*/
-  border-radius: 0 0 15px 15px;
 }
-
 /*
   nav div selecciona todos los divs dentro de nav
   nav > div selecciona solo los divs hijos directos de nav
 */
 nav div {
   display: flex;
-  /*Espaciado entre los elementos de la fila o columna*/
-  gap: 20px
+  gap: 20px 
+  /* el "gap" es el espaciado entre los elementos de la fila o columna*/
 }
 /*
+Las pseudoclases manejan el estado de un elemento
+:hover se activa cuando el mouse pasa por encima del elemento
+:active se activa cuando el elemento es presionado
+:focus se activa cuando el elemento es seleccionado
+:visited se activa cuando el elemento ha sido visitado
+:link se activa cuando el elemento es un enlace (link)
+:first-child se activa cuando el elemento es el primer hijo de su padre
+:last-child se activa cuando el elemento es el ultimo hijo de su padre
+*/
+nav div a:visited, nav div a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.enlace:hover {
+color: black;
+}
+/*
+con el "#" se identifica un id, y con el "." se identifica una clase
+*/
+/*
+#Inicio:hover, #Introduccion:hover {
+  color: rgb(0, 0, 0); ;
+}
+*/
+/*
+  Lo eliminare para usar una propiedad de flex, que me ahorrara
+  escribir este codigo
   nav div a {
     margin: 0 20px;
   }
