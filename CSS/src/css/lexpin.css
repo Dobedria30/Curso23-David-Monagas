@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding:0;
+  font-family: "Space Grotesk", sans-serif;;
 }
 
 /*Barra de navegacion*/
@@ -69,4 +70,20 @@ con el "#" se identifica un id, y con el "." se identifica una clase
   }
 */
 
-  
+/*MAIN*/
+main{
+  height: 70vh;
+  min-height: 70vh;
+  background-color: #4b515c;
+}
+
+/*
+GRID
+Grid es un tipo de display que permite manejar
+un sistema de filas y columnas
+*/
+
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
