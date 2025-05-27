@@ -72,18 +72,42 @@ con el "#" se identifica un id, y con el "." se identifica una clase
 
 /*MAIN*/
 main{
-  height: 70vh;
-  min-height: 70vh;
-  background-color: #4b515c;
+  background-color: rgb(131, 114, 114);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
 }
 
 /*
 GRID
 Grid es un tipo de display que permite manejar
-un sistema de filas y columnas
+un sistema de filas y columnas (se pueden utilizar %, px y fr)
 */
 
 header {
+  height: 80vh;
+  min-height: 80vh;
+  background-color: aqua;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 25px;
+  /* eje principal (solo para el caso de usar "display: grid")*/
+  justify-items: center;
+  /* eje secundario (solo para el caso de usar "display: grid")*/
+  align-content: center;
+  gap: 20px;
+}
+
+header > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
