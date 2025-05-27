@@ -49,6 +49,7 @@ Las pseudoclases manejan el estado de un elemento
 nav div a:visited, nav div a:link {
   color: white;
   text-decoration: none;
+  transition: all 1s ease;
 }
 
 .enlace:hover {
@@ -72,7 +73,10 @@ con el "#" se identifica un id, y con el "." se identifica una clase
 
 /*MAIN*/
 main{
-  background-color: rgb(131, 114, 114);
+  /*para agragar una color de forma gradiente, escribimos
+  linear-gradient en el backgraunt-image o tambien en el backgraunt */
+  background-color: black;
+  background-image: linear-gradient(to right, #bd4444, #d8e751);
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
@@ -88,6 +92,9 @@ header {
   height: 80vh;
   min-height: 80vh;
   background-color: aqua;
+  background-image: url("./../../../../../../Downloads/Viktor2.jpg");
+  background-size: cover;
+  /*opacity; 0.1;*/
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 25px;
@@ -110,4 +117,23 @@ header > div > div {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+/*Animacion*/
+.gradient-background {
+  background: linear-gradient(175deg,#bd4444,#d8e751,#ffffff);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+/*@keyframes se usa para crear animaciones, y va por porcentajes (%)*/
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
