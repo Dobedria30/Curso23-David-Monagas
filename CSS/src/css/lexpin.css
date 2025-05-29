@@ -37,7 +37,7 @@ nav div {
   /* el "gap" es el espaciado entre los elementos de la fila o columna*/
 }
 /*
-Las pseudoclases manejan el estado de un elemento
+Las pseudo-clases manejan el estado de un elemento
 :hover se activa cuando el mouse pasa por encima del elemento
 :active se activa cuando el elemento es presionado
 :focus se activa cuando el elemento es seleccionado
