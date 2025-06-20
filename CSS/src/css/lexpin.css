@@ -1,3 +1,28 @@
+/*
+  Medias
+  px: pixeles (Absoluta)
+  %: porcentaje (relativa)
+  em: tamaño de la fuente del elemento (relativa)
+  rem: tamaño de la fuente del elemento raiz (relativa/ se usa mas para la tipografia)
+  vh: porcentaje de la altura de la ventana
+  vw: porcentaje del ancho de la ventana
+  vmin: porcentaje del menor tamaño de la ventana
+  vmax: porcentaje del mayor tamaño de la ventana
+*/
+
+:root {
+  /*Variables de CSS*/
+  --color-primario: ;
+  --color-secundario: ;
+  --color-terciario: ;
+  --color-cuaternario: ;
+  --color-quintario: ;
+  --titulares:3rem;
+  --subtitulares:30px;
+  --texto:20px;
+  --texto-pequeño:15px;
+}
+
 * {
   margin: 0;
   padding:0;
@@ -8,7 +33,7 @@
 /*Barra de navegacion*/
 nav {
   background-color: rgb(0, 85, 255);
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 25px;
   /*al poner display flex, el elemento se convierte en una fila automaticamente*/
   display: flex;
@@ -18,13 +43,13 @@ nav {
   align-items: center;
   /*height: 300px;*/
   /*padding es la distancia entre el borde de la caja y su contenido*/
-  padding: 20px;
+  padding: 10px 20px;
   /*
   padding: 20px; 20 px en todas las direcciones
   padding: 20px 0; 20 arriba y abajo, 0 derecha e izquierda
   padding: 20px 0 20px 0; 20 arriba, 0 derecha, 20 abajo, 0 izquierda
   */
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 0 0;
   /*Radio de los bordes, se lee arriba izquierda, arriba derecha
   abajo izquierda, abajo derecha*/
 }
@@ -48,13 +73,13 @@ Las pseudo-clases manejan el estado de un elemento
 :last-child se activa cuando el elemento es el ultimo hijo de su padre
 */
 nav div a:visited, nav div a:link {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: all 1s ease;
 }
 
 .enlace:hover {
-color: black;
+color: rgb(0, 0, 0);
 }
 /*
 con el "#" se identifica un id, y con el "." se identifica una clase
@@ -76,8 +101,8 @@ con el "#" se identifica un id, y con el "." se identifica una clase
 main{
   /*para agragar una color de forma gradiente, escribimos
   linear-gradient en el backgraunt-image o tambien en el backgraunt */
-  background-color: black;
-  background-image: linear-gradient(to right, #bd4444, #d8e751);
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(to right, rgb(189, 68, 68), rgb(216, 231, 81));
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
@@ -90,12 +115,12 @@ un sistema de filas y columnas (se pueden utilizar %, px y fr)
 */
 
 header {
-  height: 80vh;
-  min-height: 80vh;
+  height: 60vmax;
+  min-height: 600px;
   background-size: cover;
   /*opacity; 0.1;*/
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   border-radius: 25px;
   /* eje principal (solo para el caso de usar "display: grid")*/
   justify-items: center;
@@ -157,7 +182,7 @@ header::before {
 }
 
 h1{
-  font-size: 50px;
+  font-size: var(--titulares);
   color: rgb(193, 116, 8);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -180,7 +205,7 @@ h2 {
 
 button {
   background-color: rgb(193, 116, 8);
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   padding: 10px 20px;
   border-radius: 20px;
@@ -191,7 +216,7 @@ button {
 
 button:hover {
   background-color: rgb(0, 85, 255);
-  color: black;
+  color: rgb(0, 0, 0);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -201,7 +226,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /*Animacion*/
 .gradient-background {
-  background: linear-gradient(175deg,#bd4444,#d8e751,#ffffff);
+  background: linear-gradient(175deg,rgb(189, 68, 68),rgb(216, 231, 81),rgb(255, 255, 255));
   background-size: 180% 180%;
   animation: gradient-animation 15s ease infinite;
 }
@@ -217,3 +242,5 @@ p, h1, h2, h3, h4, h5, h6 {
     background-position: 0% 50%;
   }
 }
+
+
