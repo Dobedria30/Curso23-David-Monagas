@@ -120,7 +120,7 @@ header > div > div {
 }
 
 /*
-  los pseudo-elementos permiten seleccionar partes de un elemento
+  los pseudoelementos permiten seleccionar partes de un elemento
   ::before se activa antes de que el elemento sea renderizado
   ::after se activa despues de que el elemento sea renderizado
   ::first-letter se activa en la primera letra del elemento
