@@ -140,7 +140,7 @@ header > div > div {
 */
 
 header::before {
-  background-image: url("./../../../../../../Downloads/Viktor2.jpg");
+  background-image: url("./Viktor2.jpg");
   background-size: cover;
   background-position: center;
   content: "";
