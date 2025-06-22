@@ -130,6 +130,27 @@ header {
   position: relative;
 }
 
+header::before {
+  background-image: url("./Viktor2.jpg");
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: absolute;
+  z-index: 5;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  border: 5px solid rgb(247, 246, 246);
+  box-shadow: 10px 5px 12px 5px rgba(0, 0, 0, 1);
+}
+
+.menu-responsive {
+  display: none;
+}
+
 header > div{
   display: flex;
   flex-direction: column;
@@ -164,22 +185,6 @@ header > div > div {
   stiky: posicion fija al scroll (tiene su espacio eb ek html, pero se queda fijo al hacer scroll)
 */
 
-header::before {
-  background-image: url("./Viktor2.jpg");
-  background-size: cover;
-  background-position: center;
-  content: "";
-  position: absolute;
-  z-index: 5;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 25px;
-  border: 5px solid rgb(247, 246, 246);
-  box-shadow: 10px 5px 12px 5px rgba(0, 0, 0, 1);
-}
 
 h1{
   font-size: var(--titulares);
@@ -242,5 +247,49 @@ p, h1, h2, h3, h4, h5, h6 {
     background-position: 0% 50%;
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  p {
+    color: rgb(224, 25, 25);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  p {
+    color: rgb(20, 221, 97);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  p {
+    color: rgb(0, 0, 0);
+  }
+  header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-movil {
+    display: none;
+  }
+  .menu-responsive {
+    display: flex;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  p {
+    color: rgb(255, 255, 255);
+  }
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  p {
+    color: rgb(251, 255, 0);
+  }
+} */
 
 
