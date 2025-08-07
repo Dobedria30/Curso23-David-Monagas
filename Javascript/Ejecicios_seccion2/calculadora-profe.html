@@ -8,6 +8,10 @@
   <body>
     <script>
       function calculadora(num1, num2, operacion) {
+        if (isNaN(num1) || isNaN(num2)) {
+          alert("Por favor, ingrese números válidos.");
+          return;
+        }
         if (operacion === "suma") {
           alert("El resultado de la suma es: " + (num1 + num2));
         } else if (operacion === "resta") {

@@ -50,6 +50,11 @@ sumar(5, 10); // Esto muestra 15 en la consola
 */
 
 //2.R
+// Llamada a la función con los números y el operador ingresados
+let num1 = Number(prompt("Ingrese el primer número:"));
+let num2 = Number(prompt("Ingrese el segundo número:"));
+let operador = prompt("Ingrese el operador (suma, resta, multiplicacion o division):");
+
 function calculadora(num1, num2, operador) {
   if (operador === "suma") {
     console.log(num1 + num2);
@@ -67,11 +72,6 @@ function calculadora(num1, num2, operador) {
     console.log("Error: Operador no válido");
   }
 } 
-
-// Llamada a la función con los números y el operador ingresados
-let num1 = Number(prompt("Ingrese el primer número:"));
-let num2 = Number(prompt("Ingrese el segundo número:"));
-let operador = prompt("Ingrese el operador (suma, resta, multiplicacion o division):");
 
 calculadora(num1, num2, operador);  // Puedes llamar a la función tantas veces como quieras con diferentes números y operadores
 

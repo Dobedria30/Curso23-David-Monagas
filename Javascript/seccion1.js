@@ -24,7 +24,7 @@ let array = ["pera", "manzana", "uva"]; // Array (lista)
 console.log(array); // Imprime ["pera", "manzana", "uva"]
 console.log(array[0]); // Imprime "pera" (primer elemento del array)
 let nulo = null; // Nulo (sin valor)
-let indefinido; // Indefinido (sin asignar/undefined)
+let indefinido; // Indefinido (sin asignar/undefined. todas las variables a las q no se le asigne un valor son indefinidas)
 let objeto = { nombre: "Juan", edad: 30 }; // Objeto (clave-valor)
 console.log(objeto); // Imprime { nombre: "Juan", edad: 30 }
 console.log(objeto.nombre); // Imprime "Juan" (acceso a la propiedad nombre del objeto)
@@ -208,7 +208,9 @@ if (edad < 0 || edad > 120) {
   console.log("Eres mayor de edad");
 }
 
-let input = prompt("Ingrese un número entre 1 y 10:");
+let input = prompt("Ingrese un número entre 1 y 10:"); /*asi le pedimos un dato al usuario y 
+lo guardamos en la variable asignada*/
+
 
 /*
   Ejercicios para practicar
@@ -223,32 +225,39 @@ let input = prompt("Ingrese un número entre 1 y 10:");
 
 
 //1. R
-let num1 = prompt("Ingrese el primer número:");
-let num2 = prompt("Ingrese el segundo número:");
+let num1 = Number (prompt("Ingrese el primer número:"));
+let num2 = Number (prompt("Ingrese el segundo número:"));
 let operacion = prompt("Ingrese la operación (suma, resta, multiplicacion o división):");
 
 if (operacion === "suma") {
-  console.log("Resultado:", num1 + num2);
+  console.log("Resultado:" + (num1 + num2));
 } else if (operacion === "resta") {
-  console.log("Resultado:", num1 - num2);
-} else if (operacion === "multiplicacion") {
-  console.log("Resultado:", num1 * num2);
-} else if (operacion == "división") {
-  console.log("Resultado:", num1 / num2);
+  console.log("Resultado:" + num1 - num2);
+} else if (operacion === "multiplicacion" || operacion === "multiplicación") {
+  console.log("Resultado:" + num1 * num2);
+
+} else if (operacion === "división" || operacion === "division") {
+  if (num2 !== 0) {
+    console.log("Resultado:" + num1 / num2);
+  } else {
+    console.log("Error: No se puede dividir por cero");
+  }
 } else {
-  console.log("Operación no válida");
+  console.log("Error: Operación no válida");
 }
 
 //2. R
-let numero = prompt("Ingrese un número:");
+let numero = Number(prompt("Ingrese un número:"));
 if (numero % 2 === 0) {
-  console.log("El número es par");
+  console.log("El número " + numero + " es par");
+} else if (numero % 2 === 1) {
+  console.log("El número " + numero + " es impar");
 } else {
-  console.log("El número es impar");
+  console.log("El número ingresado no es un entero válido");
 }
 
 //3. R
-let mes = prompt("Ingrese un número entre 1 y 12:");
+let mes = Number(prompt("Ingrese un número entre 1 y 12:"));
 switch (mes) {
   case 1:
     console.log("Enero");
